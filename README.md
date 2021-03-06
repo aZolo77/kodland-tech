@@ -1,5 +1,7 @@
 # ТЗ для Kodland
 
+> Посмотреть можно по [ссылке](https://azolo77.github.io/kodland-tech/)
+
 Выполнял ТЗ с использованием:
 
 - js
