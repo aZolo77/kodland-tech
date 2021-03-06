@@ -1,0 +1,127 @@
+// vars
+$bg-color: #e2e2e2;
+$header-color: #333333;
+$main-text-color: #666666;
+$accent-bg-color: #4ed17b;
+$accent-bg-color_hover: #3ea562;
+$accent-text-color: #ffffff;
+
+$xl-font-size: 35px;
+$lg-font-size: 20px;
+$md-font-size: 15px;
+
+// * Widths
+$desktopWidth: 1200px;
+$smDesktopWidth: 992px;
+$tableWidth: 767px;
+$xlPhoneWidth: 576px;
+$phoneWidth: 480px;
+$smPhoneWidth: 320px;
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+html,
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: $tableWidth) {
+    width: 750px;
+  }
+
+  @media (min-width: $smDesktopWidth) {
+    width: 970px;
+  }
+
+  @media (min-width: $desktopWidth) {
+    width: 1170px;
+  }
+}
+
+.items-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 1rem;
+
+  .item {
+    width: 300px;
+    overflow: hidden;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid $bg-color;
+
+    .item-img {
+      width: auto;
+      height: 205px;
+    }
+
+    .item-info {
+      padding: 30px 25px;
+
+      .item-info_name {
+        color: $header-color;
+        font-size: $lg-font-size;
+        margin-bottom: 5px;
+      }
+
+      .item-info_description {
+        color: $main-text-color;
+        font-size: $md-font-size;
+        line-height: 20px;
+      }
+
+      .price-block {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+
+        .item-price {
+          font-size: $xl-font-size;
+        }
+
+        .item-currency {
+          font-size: $lg-font-size;
+        }
+
+        .item-cart {
+          display: flex;
+          justify-content: center;
+          border-radius: 3px;
+          align-items: center;
+          width: 50px;
+          height: 40px;
+          background-color: $accent-bg-color;
+          color: $accent-text-color;
+          cursor: pointer;
+          transition: 0.3s all;
+
+          &:hover {
+            background-color: $accent-bg-color_hover;
+          }
+        }
+      }
+    }
+
+    @media (max-width: $xlPhoneWidth) {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: $xlPhoneWidth) {
+    justify-content: center;
+  }
+}

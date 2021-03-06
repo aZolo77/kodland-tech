@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Regular.ttf") format("truetype");
+}
+html,
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 767px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.items-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+.items-wrapper .item {
+  width: 300px;
+  overflow: hidden;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #e2e2e2;
+}
+.items-wrapper .item .item-img {
+  width: auto;
+  height: 205px;
+}
+.items-wrapper .item .item-info {
+  padding: 30px 25px;
+}
+.items-wrapper .item .item-info .item-info_name {
+  color: #333333;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.items-wrapper .item .item-info .item-info_description {
+  color: #666666;
+  font-size: 15px;
+  line-height: 20px;
+}
+.items-wrapper .item .item-info .price-block {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.items-wrapper .item .item-info .price-block .item-price {
+  font-size: 35px;
+}
+.items-wrapper .item .item-info .price-block .item-currency {
+  font-size: 20px;
+}
+.items-wrapper .item .item-info .price-block .item-cart {
+  display: flex;
+  justify-content: center;
+  border-radius: 3px;
+  align-items: center;
+  width: 50px;
+  height: 40px;
+  background-color: #4ed17b;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.items-wrapper .item .item-info .price-block .item-cart:hover {
+  background-color: #3ea562;
+}
+@media (max-width: 576px) {
+  .items-wrapper .item {
+    margin-right: 0;
+  }
+}
+@media (max-width: 576px) {
+  .items-wrapper {
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
